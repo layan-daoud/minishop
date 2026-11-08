@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover everyday essentials at MiniShop.">
+  <title>MiniShop | Everyday Finds</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="products.js" defer></script>
+<script src="cart.js" defer></script>
+<script src="./script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="MiniShop home"><span class="logo-mark">M</span> mini<span>shop</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="cart-button" id="cartButton" aria-label="Shopping cart">
+        <span class="cart-icon" aria-hidden="true">🛍</span>
+        <span>Cart</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> YOUR EVERYDAY FAVORITES</p>
+        <h1>Little things.<br><em>Big happiness.</em></h1>
+        <p class="hero-description">Discover thoughtful essentials and everyday favorites picked just for you.</p>
+        <a class="primary-button" href="#products">Explore collection <span aria-hidden="true">→</span></a>
+        <div class="hero-note"><span class="sparkle">✦</span> New finds, good vibes, every day.</div>
+      </div>
+      <div class="hero-art" aria-label="Stylish shopping illustration">
+        <div class="sun-shape"></div>
+        <div class="hero-label label-top">MADE FOR YOU</div>
+        <div class="shopping-bag">
+          <div class="bag-handle"></div>
+          <div class="bag-front"><span>mini</span><strong>shop</strong><i>✦</i></div>
+        </div>
+        <div class="floating-card card-one"><span>✿</span><small>good things<br>inside</small></div>
+        <div class="floating-card card-two"><strong>♡</strong><small>picked with<br>care</small></div>
+        <div class="hero-label label-bottom">FIND YOUR NEW FAVORITE ↗</div>
+      </div>
+    </section>
+
+    <section class="benefits container" aria-label="Store benefits">
+      <div class="benefit"><span class="benefit-icon">✦</span><div><strong>Curated for you</strong><small>Things you'll love</small></div></div>
+      <div class="benefit"><span class="benefit-icon">♡</span><div><strong>Quality first</strong><small>Made for everyday</small></div></div>
+      <div class="benefit"><span class="benefit-icon">↗</span><div><strong>Easy shopping</strong><small>Simple and joyful</small></div></div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE MINI SHOP EDIT</p><h2>Popular <em>right now</em></h2></div>
+          <p>Little upgrades that make every day<br class="desktop-break"> feel a little more special.</p>
+        </div>
+        <div class="search-box">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search by product name or category..."
+    aria-label="Search products"
+  >
+</div>
+        <div class="filter-row" id="filterRow" aria-label="Filter products">
+          <button class="filter-button active" data-category="All">All items</button>
+          <button class="filter-button" data-category="Accessories">Accessories</button>
+          <button class="filter-button" data-category="Lifestyle">Lifestyle</button>
+          <button class="filter-button" data-category="Tech">Tech</button>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+     <section class="cart-section" id="cart">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">YOUR SHOPPING BAG</p>
+        <h2>Your <em>Cart</em></h2>
+      </div>
+      <p>Everything you picked, all in one place.</p>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-summary">
+      <p>Total items: <strong id="totalItems">0</strong></p>
+      <p>Total price: <strong id="totalPrice">$0.00</strong></p>
+      <button id="clearCart" class="add-button">Clear Cart</button>
+    </div>
+  </div>
+</section>
+    <section class="about-section container" id="about">
+      <div class="about-symbol">M<span>✦</span></div>
+      <div><p class="eyebrow">A LITTLE ABOUT US</p><h2>Good finds.<br><em>Good feelings.</em></h2></div>
+      <p class="about-copy">MiniShop is all about finding the small things that bring a little joy to your everyday routine. Browse our collection and find something that feels like you.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <a class="logo footer-logo" href="#home"><span class="logo-mark">M</span> mini<span>shop</span></a>
+      <p>Everyday favorites, picked with care. ♡</p>
+      <a href="mailto:hello@minishop.example">Get in touch ↗</a>
+      <small>© <span id="currentYear"></span> MiniShop. Made for practice.</small>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
